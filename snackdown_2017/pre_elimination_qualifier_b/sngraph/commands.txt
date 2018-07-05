@@ -1,0 +1,8 @@
+g++ -std=c++11 sngraph_union_find.cpp -o sngraph_union_find.out;
+g++ -std=c++11 sngraph.cpp -o sngraph.out;
+g++ -std=c++11 graph_generator.cpp -o graph_generator.out;
+
+./graph_generator.out > input_gen.txt;
+./sngraph.out < input_gen.txt > output_normal.txt;
+./sngraph_union_find.out < input_gen.txt > output_union_find.txt;
+diff output_normal.txt output_union_find.txt;

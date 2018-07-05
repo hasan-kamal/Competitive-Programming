@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script defer="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/beacon.js"></script>
+	
+	<meta name="viewport" content="width=device-width">
+	<title>Algorithm #11: Binary Exponentiation | Code Accepted</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://codeaccepted.wordpress.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+		<script src="https://s0.wp.com/wp-content/themes/pub/suits/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="Code Accepted » Feed" href="https://codeaccepted.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code Accepted » Comments Feed" href="https://codeaccepted.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code Accepted » Algorithm #11: Binary Exponentiation Comments Feed" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/feed/">
+	<script src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/AdCallAggregator" async=""></script><script type="text/javascript" async="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/bid"></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1488818651h&ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource" type="text/css" media="all">
+<link rel="stylesheet" id="suits-font-css" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2-1" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-3-1" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-4-1" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(2)" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(3)"></script>
+<link rel="stylesheet" id="all-css-0-2" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://codeaccepted.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Algorithm #10: Disjoint Set Union" href="https://codeaccepted.wordpress.com/2014/05/27/disjoint-set-union/">
+<link rel="next" title="Algorithm #12: Matrix Exponentiation" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/">
+<link rel="shortlink" href="http://wp.me/p3OZ6g-9N">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm #11: Binary Exponentiation">
+<meta property="og:url" content="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/">
+<meta property="og:description" content="Some programming problems require us to find the value of base^power modulo some positive prime number M (power&gt;=0). If you had to find the value of ( base^power ) % M, how would you do it?? The…">
+<meta property="article:published_time" content="2014-05-31T18:49:37+00:00">
+<meta property="article:modified_time" content="2014-10-15T17:02:46+00:00">
+<meta property="og:site_name" content="Code Accepted">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:text:title" content="Algorithm #11: Binary Exponentiation">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://codeaccepted.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://codeaccepted.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://codeaccepted.wordpress.com/osd.xml" title="Code Accepted">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Code Accepted"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Want to perform better in coding competitions? If so, then read on!"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://codeaccepted.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Algorithm #11: Binary Exponentiation | Code Accepted on WordPress.com">
+<meta name="description" content="Some programming problems require us to find the value of base^power modulo some positive prime number M (power&gt;=0). If you had to find the value of ( base^power ) % M, how would you do it?? The easiest method that comes to mind is iterating a loop. The above method is simple but not at…">
+ 		<script type="text/javascript">
+		var _ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'codeaccepted.wordpress.com',
+				pageURL: 'https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/'
+			};
+		</script>
+ 		<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/head.js"></script>
+		<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/publishertag.js"></script><link rel="amphtml" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/amp/"><link rel="stylesheet" type="text/css" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ga.js"></script>
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/services.css"><iframe src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/showad.html" height="0" width="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="height: 0px; width: 0px; border: 0px;"></iframe><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+
+<body class="post-template-default single single-post postid-607 single-format-standard mp6 customizer-styles-applied single-author no-footer-sidebar highlander-enabled highlander-light">
+	<div id="page" class="hfeed site">
+
+		<header id="masthead" class="site-header" role="banner">
+			
+			<a class="home-link" href="https://codeaccepted.wordpress.com/" title="Code Accepted" rel="home">
+				<h1 class="site-title">Code Accepted</h1>
+				<h2 class="site-description">Want to perform better in coding competitions? If so, then read on!</h2>
+			</a><!-- #navbar .header-navigation -->
+
+			<div id="navbar" class="header-navigation">
+
+				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+					<h3 class="menu-toggle">Menu</h3>
+					<div class="nav-menu"><ul>
+<li class="page_item page-item-1"><a href="https://codeaccepted.wordpress.com/about/">About</a></li>
+</ul></div>
+					<form role="search" method="get" class="search-form" action="https://codeaccepted.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>				</nav><!-- #site-navigation .navigation .main-navigation -->
+
+			</div><!-- #navbar .header-navigation -->
+
+		</header><!-- #masthead .site-header -->
+
+		<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+
+		<div id="content" class="site-content" role="main">
+
+			
+<article id="post-607" class="post-607 post type-post status-publish format-standard hentry category-algorithm tag-binary-exponentiation tag-fast-power tag-log-power-finding tag-modular-exponentiation">
+
+	
+			<header class="entry-header">
+
+				
+				<h1 class="entry-title">Algorithm #11: Binary&nbsp;Exponentiation</h1>
+			</header><!-- .entry-header -->
+
+											<div class="entry-content">
+					<p>Some programming problems require us to find the value of <em>base</em>^<em>power</em> modulo some positive prime number <em>M</em> (<em>power</em>&gt;=0).<br>
+If you had to find the value of ( <em>base</em>^<em>power</em> ) % <em>M</em>, how would you do it??<br>
+The easiest method that comes to mind is iterating a loop.</p>
+<div><div id="highlighter_412803" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">findPower(</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">base,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">power,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">M)</code></div><div class="line number2 index1 alt1"><code class="cpp plain">{</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">ans=1;</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i;</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">(i=1;i&lt;=power;i++)</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">ans=(ans*base)%M;</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">ans;</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>The above method is simple but not at all efficient. For values of <em>power</em> around 10^8 or more, this method will take a lot of time to run. If you increase the value of <em>power</em> to 10^16, you’ll pass out from college before the computation ends! Increase it to around 10^25, the sun will become a <a href="http://en.wikipedia.org/wiki/Red_giant">Red Giant</a> and swallow Earth before the value is computed!!</p>
+<p>But why would we need to find such large values :P. Yeah that’s a valid question; but it shouldn’t stop us from learning a better algorithm!</p>
+<p>There is a much better algorithm than the linear one described above, which is the topic of this post.<br>
+I’ve already introduced <strong>Binary Exponentiation</strong> as a part of an earlier post. But, I need to formalize it for the next post.</p>
+<p>Binary Exponentiation is based on the idea that,<br>
+to find <em>base</em>^<em>power</em>, all we need to do is find <em>base</em>^(<em>power</em>/2) and square it. And this method can be repeated in finding <em>base</em>^(<em>power</em>/2) also.</p>
+<p>Suppose that we need to find 5^8.<br>
+5^8=5^4 * 5^4<br>
+5^4=5^2 * 5^2<br>
+5^2=5 * 5</p>
+<p>The number of steps required to find 5^8 has been reduced from 8 to just 3.<br>
+As another example, consider 8^51<br>
+8^51 = 8^25 * 8^25 * 8<br>
+8^25 = 8^12 * 8^12 * 8<br>
+8^12 = 8^6 * 8^6<br>
+8^6 =  8^3 * 8^3<br>
+8^3 = 8 * 8 * 8</p>
+<p>If we used the linear algorithm, we would have required 27 steps. But, using this awesome trick we required roughly 5 steps.<br>
+In a general sense, we require steps in the order of <strong>O(logbase2 n)</strong></p>
+<p>This algorithm can be implemented recursively as well as iteratively.</p>
+<p><strong>RECURSIVE IMPLEMENTATION:</strong></p>
+<div><div id="highlighter_769818" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">fastPower(</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">base,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">power,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">M)</code></div><div class="line number2 index1 alt1"><code class="cpp plain">{</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">(power==0)</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">1;</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">(power==1)</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">base;</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">halfn=fastPower(base,power/2,M);</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">(power%2==0)</code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">( halfn * halfn ) % M;</code></div><div class="line number10 index9 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">else</code></div><div class="line number11 index10 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">( ( ( halfn * halfn ) % M ) * base ) % M;</code></div><div class="line number12 index11 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p><strong>ITERATIVE IMPLEMENTATION:</strong></p>
+<div><div id="highlighter_99740" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp color1 bold">int</code> <code class="cpp plain">fastPower(</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">base,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">power,</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">M)</code></div><div class="line number2 index1 alt1"><code class="cpp plain">{</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">long</code> <code class="cpp color1 bold">long</code> <code class="cpp plain">result=1;</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code> <code class="cpp plain">(power&gt;0) </code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">{</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(power%2==1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">result = (result*base)%M;</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">base = (base*base)%M;</code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">power/=2;</code></div><div class="line number10 index9 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number11 index10 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">result;</code></div><div class="line number12 index11 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>The iterative implementation can be a little tricky to understand. Take a pen and paper and trace the values of variables through the iterations. That’s an effective way to understand and convince yourself.<br>
+The iterative version runs a little faster that the recursive version. </p>
+<p>Binary exponentiation will find the value of <em>base</em>^(10^25) in about 85 steps only.. Now that’s really cool…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The maximum number of multiplications that are required to compute <em>base</em> ^ <em>power</em> is 2 X FLOOR(logbase2 (<em>power</em>)). Think why 😛</p>
+			<style type="text/css">
+			div.wpmrec2x{max-width:610px;}
+			div.wpmrec2x div.u > div{float:left;margin-right:10px;}
+			div.wpmrec2x div.u > div:nth-child(3n){margin-right:0px;}
+			</style>		<div class="wpcnt">
+			<div class="wpa wpmrec wpmrec2x" style="display: inline-block !important;">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">
+								<script type="text/javascript" id="s26942">
+				(function(g,$){if("undefined"!=typeof g.__ATA){
+					g.__ATA.initAd({sectionId:26942, width:300, height:250});
+					g.__ATA.initAd({sectionId:114160, width:300, height:250});
+				}})(window,jQuery);
+			</script><div id="fif_slot_automattic-id-8677" style="width:300px;height:250px;"><iframe id="fif_slot_automattic-id-_fif_slot_automattic-id-8677" name="fif_slot_automattic-id-_fif_slot_automattic-id-8677" frameborder="0" scrolling="no" width="300" height="250" style="border:none;width:300px;height:250px;" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource.html"></iframe></div><div id="fif_slot_automattic-id-5181" style="width:300px;height:250px;"><iframe id="fif_slot_automattic-id-_fif_slot_automattic-id-5181" name="fif_slot_automattic-id-_fif_slot_automattic-id-5181" frameborder="0" scrolling="no" width="300" height="250" style="border:none;width:300px;height:250px;" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(11).html"></iframe></div>
+				</div>
+				        <div id="crt-1314735047" style="width: 300px; height: 250px; display: none !important;"></div>
+        <script type="text/javascript">
+        var o = document.getElementById('crt-1314735047');
+        if ("undefined"!=typeof Criteo) {
+            var p = o.parentNode;
+            p.style.setProperty('display', 'inline-block', 'important');
+            o.style.setProperty('display', 'block', 'important');
+            Criteo.DisplayAcceptableAdIfAdblocked({zoneid:388248,containerid:"crt-1314735047",collapseContainerIfNotAdblocked:true,"callifnotadblocked": function () {var o = document.getElementById('crt-1314735047'); o.style.setProperty('display','none','important');o.style.setProperty('visbility','hidden','important'); }
+        });
+        } else {
+            o.style.setProperty('display', 'none', 'important');
+            o.style.setProperty('visibility', 'hidden', 'important');
+        }
+        </script>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-607" class="share-twitter sd-button share-icon" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-607" class="share-facebook sd-button share-icon" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?share=facebook&amp;nb=1" target="_blank" title="Share on Facebook"><span>Facebook<span class="share-count">1</span></span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-607" class="share-google-plus-1 sd-button share-icon" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?share=google-plus-1&amp;nb=1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-56480280-607-592da9f1e1f79" data-src="//widgets.wp.com/likes/#blog_id=56480280&amp;post_id=607&amp;origin=codeaccepted.wordpress.com&amp;obj_id=56480280-607-592da9f1e1f79" data-name="like-post-frame-56480280-607-592da9f1e1f79"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-56480280-607-592da9f1e1f79" height="55px" width="100%" frameborder="0" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(12).html"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="427" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codeaccepted.wordpress.com/2014/02/15/output-the-answer-modulo-109-7/" title="&quot;Output the answer modulo 10^9 + 7&quot;
+
+You might have noticed that many programming problems ask you to output the answer “modulo 1000000007 (10^9 + 7)”. In this post I’m going to discuss what this means and the right way to deal with this type of questions. I should have covered this topic earlier because questions involving…" rel="nofollow" data-origin="607" data-position="0">"Output the answer modulo 10^9 + 7"</a></span><span class="jp-relatedposts-post-context">In "Algorithm"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="605" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/" title="Algorithm #12: Matrix Exponentiation
+
+Please read the previous post on Binary Exponentiation before you start with this one. Lets first understand what a recurrence relation is. You probably know about the Fibonacci Series. It is a sequence of numbers in which the first number is 0, the second number is 1 and all subsequent…" rel="nofollow" data-origin="607" data-position="1">Algorithm #12: Matrix Exponentiation</a></span><span class="jp-relatedposts-post-context">In "Algorithm"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="256" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codeaccepted.wordpress.com/2014/01/14/algorithm-4-bit-masking/" title="Algorithm #4: Bit Masking
+
+First of all, I&#39;d like to apologize for not having posted anything at all since so many weeks. I&#39;ll try to be fairly regular from now. The topic that I am going to discuss now is called Bit Masking. This technique is useful when you have a set and have…" rel="nofollow" data-origin="607" data-position="2">Algorithm #4: Bit Masking</a></span><span class="jp-relatedposts-post-context">In "Algorithm"</span></p></div></div></div>									</div><!-- .entry-content -->
+			
+			<footer class="entry-meta">
+				Posted in <a href="https://codeaccepted.wordpress.com/category/algorithm/" rel="category tag">Algorithm</a> and tagged <a href="https://codeaccepted.wordpress.com/tag/binary-exponentiation/" rel="tag">binary exponentiation</a>, <a href="https://codeaccepted.wordpress.com/tag/fast-power/" rel="tag">fast power</a>, <a href="https://codeaccepted.wordpress.com/tag/log-power-finding/" rel="tag">log power finding</a>, <a href="https://codeaccepted.wordpress.com/tag/modular-exponentiation/" rel="tag">modular exponentiation</a><span class="on-date"> on <a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/" title="12:19 am" rel="bookmark"><time class="entry-date" datetime="2014-06-01T00:19:37+00:00">June 1, 2014</time></a></span><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://codeaccepted.wordpress.com/author/abhinav92003/" title="View all posts by abhinav92003" rel="author">abhinav92003</a></span></span>.
+									<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comments">6 Comments</a>				
+							</footer><!-- .entry-meta -->
+
+
+</article><!-- #post-# .#post-class-# -->
+
+	<nav role="navigation" id="nav-below" class="post-navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="https://codeaccepted.wordpress.com/2014/05/27/disjoint-set-union/" rel="prev"><span class="meta-nav">←</span> Algorithm #10: Disjoint Set&nbsp;Union</a></div>		<div class="nav-next"><a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/" rel="next">Algorithm #12: Matrix&nbsp;Exponentiation <span class="meta-nav">→</span></a></div>
+	
+	</nav><!-- #nav-below -->
+
+	
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			6 comments		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-62" class="pingback even thread-even depth-1 highlander-comment">
+			<div class="comment-body">
+				Pingback: <a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/" rel="external nofollow" class="url">Algorithm #12: Matrix Exponentiation | Code Accepted</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-963" class="comment odd alt thread-odd thread-alt depth-1 parent highlander-comment">
+			<article id="div-comment-963" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/7b6c72dd859b4071c263a59c00b6d7bc" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7b6c72dd859b4071c263a59c00b6d7bc?s=40&amp;d=identicon&amp;r=G" scale="2" id="grav-7b6c72dd859b4071c263a59c00b6d7bc-0">						<b class="fn">nitin vashisth</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-963">
+							<time datetime="2014-10-15T20:30:17+00:00">
+								October 15, 2014 at 8:30 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>CAN YOU PLEASE EXPLAIN WHAT CAN BE THE VALUE OF M IN THIS QUESTION.AS TAKING VALUE OF M=13,BASE=5,POWER=3 GIVES THE OUTPUT=1 IN CASE OF ITERATIVE APPROACH.?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?replytocom=963#respond" onclick="return addComment.moveForm( &quot;div-comment-963&quot;, &quot;963&quot;, &quot;respond&quot;, &quot;607&quot; )" aria-label="Reply to nitin vashisth">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-966" class="comment byuser comment-author-abhinav92003 bypostauthor even depth-2 highlander-comment">
+			<article id="div-comment-966" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/3f4a7d6acb352f9d4ee23737e0422dc4" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/3f4a7d6acb352f9d4ee23737e0422dc4?s=40&amp;d=identicon&amp;r=G" scale="2" id="grav-3f4a7d6acb352f9d4ee23737e0422dc4-0">						<b class="fn"><a href="https://codeaccepted.wordpress.com/" rel="external nofollow" class="url">abhinav92003</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-966">
+							<time datetime="2014-10-15T22:31:44+00:00">
+								October 15, 2014 at 10:31 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The value of M should be any prime number.<br>
+The output of (5^3)%13 will be 8 no matter which approach is used to compute it.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?replytocom=966#respond" onclick="return addComment.moveForm( &quot;div-comment-966&quot;, &quot;966&quot;, &quot;respond&quot;, &quot;607&quot; )" aria-label="Reply to abhinav92003">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1537" class="comment odd alt thread-even depth-1 parent highlander-comment">
+			<article id="div-comment-1537" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/7d50938cd41652e208550f81ad3452f7" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7d50938cd41652e208550f81ad3452f7?s=40&amp;d=identicon&amp;r=G" scale="2" id="grav-7d50938cd41652e208550f81ad3452f7-0">						<b class="fn"><a href="http://gravatar.com/sarthakmunshi" rel="external nofollow" class="url">sarthakmunshi</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-1537">
+							<time datetime="2014-12-21T19:02:43+00:00">
+								December 21, 2014 at 7:02 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Shouldnt the last line of iterative implentation say result%M</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?replytocom=1537#respond" onclick="return addComment.moveForm( &quot;div-comment-1537&quot;, &quot;1537&quot;, &quot;respond&quot;, &quot;607&quot; )" aria-label="Reply to sarthakmunshi">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1540" class="comment byuser comment-author-abhinav92003 bypostauthor even depth-2 highlander-comment">
+			<article id="div-comment-1540" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/3f4a7d6acb352f9d4ee23737e0422dc4" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/3f4a7d6acb352f9d4ee23737e0422dc4?s=40&amp;d=identicon&amp;r=G" scale="2" id="grav-3f4a7d6acb352f9d4ee23737e0422dc4-1">						<b class="fn"><a href="https://codeaccepted.wordpress.com/" rel="external nofollow" class="url">abhinav92003</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-1540">
+							<time datetime="2014-12-22T11:49:19+00:00">
+								December 22, 2014 at 11:49 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Actually, result will already be less than M when control reaches that line. So no use in performing modulo operation again.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?replytocom=1540#respond" onclick="return addComment.moveForm( &quot;div-comment-1540&quot;, &quot;1540&quot;, &quot;respond&quot;, &quot;607&quot; )" aria-label="Reply to abhinav92003">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1698" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+			<article id="div-comment-1698" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/8658ddd59a73056ff2653159f1ba551b" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/8658ddd59a73056ff2653159f1ba551b?s=40&amp;d=identicon&amp;r=G" scale="2" id="grav-8658ddd59a73056ff2653159f1ba551b-0">						<b class="fn">vikram</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-1698">
+							<time datetime="2015-01-19T18:37:45+00:00">
+								January 19, 2015 at 6:37 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Excellent !!!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/?replytocom=1698#respond" onclick="return addComment.moveForm( &quot;div-comment-1698&quot;, &quot;1698&quot;, &quot;respond&quot;, &quot;607&quot; )" aria-label="Reply to vikram">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://codeaccepted.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="543528bc0d"><input type="hidden" name="_wp_http_referer" value="/2014/06/01/algorithm-11-binary-exponentiation/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none solid rgba(0, 0, 0, 0.7); word-spacing: 0px; text-indent: 0px; line-height: normal; width: 598px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 36px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(13).html" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav" originals="25" src-orig="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" scale="2">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name</label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="WordPress.com Logo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Twitter picture" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Facebook photo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Google+ photo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="607" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="547eef1533"></p>
+<input type="hidden" name="genseq" value="1496164849">
+<p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1496164854062"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments .comments-area -->
+		</div><!-- #content .site-content -->
+
+	</div><!-- #primary .content-area -->
+
+
+	<div id="secondary" class="sidebar-container" role="complementary">
+				<div class="widget-area">
+			<aside id="facebook-likebox-2" class="widget widget_facebook_likebox"><h3 class="widget-title"><a href="https://www.facebook.com/codeacceptedblog">Like the blog</a></h3>		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/0F7S7QWJ0Ac.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+		<div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/codeacceptedblog" data-width="200" data-height="130" data-hide-cover="false" data-show-facepile="false" data-show-posts="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=249643311490&amp;container_width=220&amp;height=130&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fcodeacceptedblog&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;width=200"><span style="vertical-align: bottom; width: 200px; height: 130px;"><iframe name="f3d8e1679302b28" width="200px" height="130px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/page.html" style="border: none; visibility: visible; width: 200px; height: 130px;" class=""></iframe></span></div>
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-18127"><a href="https://codeaccepted.wordpress.com/category/algorithm/">Algorithm</a> (12)
+</li>
+	<li class="cat-item cat-item-885"><a href="https://codeaccepted.wordpress.com/category/introduction/">Introduction</a> (1)
+</li>
+	<li class="cat-item cat-item-1035"><a href="https://codeaccepted.wordpress.com/category/other/">Other</a> (1)
+</li>
+	<li class="cat-item cat-item-1776151"><a href="https://codeaccepted.wordpress.com/category/programming-technique/">Programming Technique</a> (3)
+</li>
+	<li class="cat-item cat-item-395"><a href="https://codeaccepted.wordpress.com/category/question/">Question</a> (2)
+</li>
+	<li class="cat-item cat-item-3549"><a href="https://codeaccepted.wordpress.com/category/theory/">Theory</a> (2)
+</li>
+		</ul>
+</aside><aside id="archives-4" class="widget widget_archive"><h3 class="widget-title">Archive</h3>		<ul>
+			<li><a href="https://codeaccepted.wordpress.com/2014/10/">October 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/06/">June 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/05/">May 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/04/">April 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/03/">March 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/02/">February 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2014/01/">January 2014</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2013/09/">September 2013</a></li>
+	<li><a href="https://codeaccepted.wordpress.com/2013/08/">August 2013</a></li>
+		</ul>
+		</aside>		<aside id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="https://codeaccepted.wordpress.com/2014/10/02/faces-of-fibonacci/">Faces of Fibonacci</a>
+						</li>
+					<li>
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/">Algorithm #12: Matrix&nbsp;Exponentiation</a>
+						</li>
+					<li>
+				<a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/">Algorithm #11: Binary&nbsp;Exponentiation</a>
+						</li>
+					<li>
+				<a href="https://codeaccepted.wordpress.com/2014/05/27/disjoint-set-union/">Algorithm #10: Disjoint Set&nbsp;Union</a>
+						</li>
+					<li>
+				<a href="https://codeaccepted.wordpress.com/2014/04/08/depth-and-breadth-first-search/">Algorithm #9 : Depth- and Breadth- First&nbsp;Search</a>
+						</li>
+				</ul>
+		</aside>		<aside id="blog_subscription-2" class="widget widget_blog_subscription"><h3 class="widget-title"><label for="subscribe-field">Follow Blog via Email</label></h3>
+				<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Enter your email address to follow this blog and receive notifications of new posts by email.</p>
+						<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Enter your email address" value="" id="subscribe-field"></p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="blog_id" value="56480280">
+						<input type="hidden" name="source" value="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2">
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="92161ff861">						<input type="submit" value="Follow">
+					</p>
+				</form>
+			
+</aside>		</div><!-- .widget-area -->
+	</div><!-- #secondary .sidebar-container -->
+
+
+		</div><!-- #main .site-main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			<div class="site-info-container">
+
+				<div class="site-info">
+										<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
+									</div><!-- .site-info -->
+
+			</div><!-- .site-info-container -->
+
+		</footer><!-- #colophon .site-footer -->
+
+	</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-7b6c72dd859b4071c263a59c00b6d7bc">
+	</div>
+	<div class="grofile-hash-map-3f4a7d6acb352f9d4ee23737e0422dc4">
+	</div>
+	<div class="grofile-hash-map-7d50938cd41652e208550f81ad3452f7">
+	</div>
+	<div class="grofile-hash-map-8658ddd59a73056ff2653159f1ba551b">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/codeaccepted.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/codeaccepted.wordpress.com\/wp-login.php?action=logout&_wpnonce=7e41ad5589","homeURL":"https:\/\/codeaccepted.wordpress.com\/","postID":"607","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(4)"></script>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/codeaccepted.wordpress.com\/2014\/06\/01\/algorithm-11-binary-exponentiation\/":607};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/form.js"></script>
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(5)"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414h&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+// Infinite scroll support
+jQuery( function( $ ) {
+	$( document.body ).on( 'post-load', function() {
+		SyntaxHighlighter.highlight();
+	} );
+} );
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"56480280","siteName":"Code Accepted","siteURL":"http:\/\/codeaccepted.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/suits","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/codeaccepted.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F","themeURL":"https:\/\/wordpress.com\/theme\/suits\/","xhrURL":"https:\/\/codeaccepted.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"e49831a5b2","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"92161ff861\" \/>","referer":"https:\/\/codeaccepted.wordpress.com\/2014\/06\/01\/algorithm-11-binary-exponentiation\/","canFollow":"1","statusMessage":"","customizeLink":"https:\/\/codeaccepted.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F","postID":"607","shortlink":"http:\/\/wp.me\/p3OZ6g-9N","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/codeaccepted.wordpress.com\/607","statsLink":"https:\/\/wordpress.com\/stats\/post\/607\/codeaccepted.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Suits","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in the Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"Join 143 other followers","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/codeaccepted.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/saved_resource(6)"></script><div id="fb-root"></div><div id="actionbar" class="actnbr-pub-suits actnbr-has-follow actnbr-hidden"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://codeaccepted.wordpress.com/"><img alt="" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/wpcom-gray-white.png" class="avatar avatar-50" height="50" width="50" scale="0"> Code Accepted</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://codeaccepted.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 					<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://codeaccepted.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fcodeaccepted.wordpress.com%2F2014%2F06%2F01%2Falgorithm-11-binary-exponentiation%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="http://wp.me/p3OZ6g-9N">Copy shortlink</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="https://codeaccepted.wordpress.com/2014/06/01/algorithm-11-binary-exponentiation/">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.defer = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			&lt;p class="robots-nocontent"&gt;&lt;img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=7518284&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="display:none;" width="1" height="1" /&gt;&lt;/p&gt;
+		</noscript><script src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'56480280','blog_tz':'5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'56480280','v':'wpcom','tz':'5','user_id':'0','post':'607','subd':'codeaccepted'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMlIueS10bVlkVk1DflJRWl03N19NU2UvJi45NC5NT250TVFuOV1EaE0lRjg2Z2tiMyVIeGpXbT96dHAtdX5ddTFxVXU4YlhnX0Zaaj1NdH4ueitbREh+VGl6MSVdLitlQX5ZL2h6V0VJOGJVRzY4JU1OU2RTWk9fVjFBbzFLSnwtPzJ3RjF4dX5xJjAwJWZZc3oyfFFJZ0k/Sm1YYSZSSEtvbnVNd1B2eFpyWV1oU1NnYWRnWjF1Y0VsTTQwdmY1Z1lxWSUzRityZkQvZi5yJjFQZHZab0c2UmkyRi0/eixYLTNXbzVOLEFTYXJUUG5YeHNfWmxCJWU='}]);
+_stq.push([ 'clickTrackerInit', '56480280', '607' ]);
+	</script>
+<noscript>&lt;img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<iframe height="0" width="0" name="automattic-passback-receiver" src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/passback.html" style="position: absolute; left: -1000px; top: -1000px; border: 0px solid; width: 0px; height: 0px;"></iframe><img src="./Algorithm #11_ Binary Exponentiation _ Code Accepted_files/g.gif" alt=":)" id="wpstats" scale="0"></body></html>

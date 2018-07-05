@@ -1,0 +1,5 @@
+g++ -std=c++11 prmq.cpp -o prmq.out;
+g++ -std=c++11 generator.cpp -o generator.out;
+
+./generator.out > inp_gen.txt;
+./prmq.out < inp_gen.txt;

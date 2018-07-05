@@ -1,0 +1,8 @@
+g++ segment_tree_lazy_propagation.cpp -o seg_lazy.out;
+g++ brute.cpp -o brute.out;
+g++ generator.cpp -o generator.out;
+
+./generator.out > inp_gen.txt;
+./brute.out < inp_gen.txt > out_brute.txt;
+./seg_lazy.out < inp_gen.txt > out_seg.txt;
+diff out_brute.txt out_seg.txt;

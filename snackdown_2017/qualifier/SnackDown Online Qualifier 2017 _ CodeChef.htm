@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://www.codechef.com/SNCKQL17?order=desc&sortBy=successful_submissions -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script id="twitter-wjs" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/widgets.js"></script><script src="./SnackDown Online Qualifier 2017 _ CodeChef_files/4e7c8fce06a9ab05530008e5.js" async=""></script><script type="text/javascript" async="" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/atrk.js"></script><script type="text/javascript" async="" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/ga.js"></script><script id="facebook-jssdk" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/sdk.js"></script><script>
+    (function(_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function() {
+        var a = arguments;
+        _errs.push(a);
+        c && c.apply(this, a)
+      };
+      var b = function() {
+        var c = e.createElement(rr),
+        b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+  <link rel="dns-prefetch" href="https://codechef_shared.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://beacon.errorception.com/">
+  <link rel="dns-prefetch" href="https://static.ak.facebook.com/">
+  <link rel="dns-prefetch" href="https://fbcdn-profile-a.akamaihd.net/">
+  <script type="text/javascript">
+    var _sf_startpt = (new Date()).getTime()
+  </script>
+  <title>SnackDown Online Qualifier 2017 | CodeChef</title>
+  
+  <meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  <link rel="shortcut icon" href="https://www.codechef.com/misc/favicon.ico" type="image/x-icon">
+  <script src="./SnackDown Online Qualifier 2017 _ CodeChef_files/platform.js" async="" defer="" gapi_processed="true"></script>
+  <script src="./SnackDown Online Qualifier 2017 _ CodeChef_files/contest-problem.js"></script>
+  <link rel="stylesheet" href="./SnackDown Online Qualifier 2017 _ CodeChef_files/contest-problem.css">
+<script async="" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/hotjar-167687.js"></script><script async="" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/modules-80a3bfb08c2c893519cdbeb7ac9fa168.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script type="text/javascript" charset="utf-8" async="" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/button.90facfc7dd48c9c8c4f1fc94e137b515.js"></script></head>
+
+<body class="sidebar-right"><div id="Error-modal_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: rgb(0, 0, 0); position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; transition: all 0.5s; z-index: 10000000;"></div><div id="Error-modal_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; transition: all 0.5s; top: 0px; right: 0px; left: 0px; bottom: 0px; text-align: center; display: none; z-index: 10000001;"><div id="Error-modal" class="generic-dialog-box popup_content" data-popup-initialized="true" aria-hidden="true" role="dialog" tabindex="-1" style="opacity: 0; visibility: hidden; display: inline-block; outline: none; transition: all 0.5s; text-align: left; position: relative; vertical-align: middle;"><button style="float:right;  background: none; border: none; font-size: 15px; color: grey; cursor:pointer; box-shadow: none !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; outline: none;" class="Error-modal_close fa fa-times"></button><div class="content"><div class="ccl-font-h2 ccl-border-bottom ccl-padding-s ccl-margin-sm ccl-align-c">Error</div><div class="ccl-font-p ccl-align-c ccl-margin-m">Some error occurred</div></div></div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div>
+  <div id="ember-root" class="ember-application">
+
+    
+    <!--#application handlebars template-->
+
+    
+    <!--#recentActivityRow handlebars template-->
+
+    
+    <!--#contestPageRow handlebars template-->
+
+    
+    <!--#singleRow handlebars template-->
+
+    
+    <!--#contestPage handlebars template-->
+
+    
+    <!--#problemPage handlebars template-->
+  <div id="ember256" class="ember-view">
+      <section class="topbar">
+        <div class="row">
+          <div class="small-12 columns">
+            <ul class="inline-list right social-login">
+              
+              
+              <li class="loggedin-user no-select">
+
+                <span class="left">
+                  <a href="https://www.codechef.com/users/hasankamal"><div class="picture"><img src="./SnackDown Online Qualifier 2017 _ CodeChef_files/user_default_thumb.jpg" width="30px" height="30px"></div> </a>
+                </span>
+
+                <span class="right">
+                  Hello <a><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #3366CC;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">3★</span><span>hasankamal</span><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                  <ul class="user-dropdown" style="display: none;">
+                    <span class="caret"></span>
+                    <li><a href="https://www.codechef.com/users/hasankamal">Account</a></li>
+                    <li><a href="https://www.codechef.com/user/726085/edit">Edit Profile</a></li>
+                    <li><a href="https://goodies.codechef.com/my-laddus/">My Laddus</a></li>
+                    <li><a href="https://www.codechef.com/todos">My Todos</a></li>
+                    <li><a href="https://www.codechef.com/sets">My Sets</a></li>
+                    <li><a href="https://www.codechef.com/certificates">My Certificates</a></li>
+                    
+                    <li><a href="https://www.codechef.com/users/hasankamal/teams">My Teams</a></li>
+                    <li><a href="https://www.codechef.com/teams/invites">Team Invites</a></li>
+                    
+                    <li><a href="https://www.codechef.com/referral">Referrals</a></li>
+                  </ul>
+                </span>
+              </li>
+              <li class="todo-section notification-box-todo" title="My Todo List">
+                <i></i>
+                <span class="notification-counter"></span>
+                <span class="notification-listbox"></span>
+              </li>
+
+              
+
+              <div id="facebook-login">
+                <div id="oauth-buttons" class="oauth-buttons-header">
+                  <li><a class="icon-social oauth_button oauth_button-small connect" title="Google Connect" id="button_google" onclick="clearUserCache(); window.location=&#39;/OAuth/google?state=initiate&#39;;"></a></li><li><a class="icon-social oauth_button oauth_button-small connect" title="Github Connect" id="button_github" onclick="clearUserCache(); window.location=&#39;/OAuth/github?state=initiate&#39;;"></a></li><li><a class="icon-social oauth_button oauth_button-small connect" title="Facebook Connect" id="button_facebook" onclick="clearUserCache(); window.location=&#39;/fb/auth?src=&#39;;"></a></li>
+                </div>
+              </div>
+              <!--#facebook-login-->
+
+              
+              <a href="https://www.codechef.com/logout" class="button grey logout-link">Logout</a>
+              
+              
+            </ul>
+            <div id="custom-login"></div>
+          </div>
+        </div>
+      </section>
+      <!--.topbar-->
+
+      <header class="site">
+        <div class="row">
+          <div class="small-12 columns">
+            <h1 class="left">
+              <a href="https://www.codechef.com/" title=""><img src="./SnackDown Online Qualifier 2017 _ CodeChef_files/logo.png" alt="CodeChef is a non-commercial competitive programming community" id="logo"><span></span></a>
+            </h1>
+            <nav class="right">
+              <div id="block-nice_menus-1" class="block block-nice_menus block-header">
+                <div class="content">
+                  <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+                   <ul class="nice-menu nice-menu-down" id="nice-menu-0"><li id="menu-302" class="menuparent menu-path-problems-school"><a href="https://www.codechef.com/problems/school" title="">PRACTICE</a><ul><li id="menu-5215" class="menu-path-ide"><a href="https://www.codechef.com/ide" title="">Code, Compile &amp; Run</a></li>
+<li id="menu-2602" class="menu-path-problems-school"><a href="https://www.codechef.com/problems/school" title="">Beginner</a></li>
+<li id="menu-303" class="menu-path-problems-easy"><a href="https://www.codechef.com/problems/easy" title="">Easy</a></li>
+<li id="menu-304" class="menu-path-problems-medium"><a href="https://www.codechef.com/problems/medium" title="">Medium</a></li>
+<li id="menu-305" class="menu-path-problems-hard"><a href="https://www.codechef.com/problems/hard" title="">Hard</a></li>
+<li id="menu-1819" class="menu-path-problems-challenge"><a href="https://www.codechef.com/problems/challenge" title="">Challenge</a></li>
+<li id="menu-1376" class="menu-path-problems-extcontest"><a href="https://www.codechef.com/problems/extcontest" title="">Peer</a></li>
+</ul>
+</li>
+<li id="menu-309" class="menuparent menu-path-contests"><a href="https://www.codechef.com/contests" title="">COMPETE</a><ul><li id="menu-2203" class="menu-path-www.codechef.com-contests"><a href="http://www.codechef.com/contests" title="">All Contests</a></li>
+<li id="menu-5225" class="menu-path-https--www.codechef.com-JUNE17"><a href="https://www.codechef.com/JUNE17" title="">June Challenge 2017</a></li>
+<li id="menu-5743" class="menu-path-https--www.codechef.com-SNCKQL17utm_sourcehomebarutm_mediumnavutm_campaignsd17"><a href="https://www.codechef.com/SNCKQL17?utm_source=homebar&amp;utm_medium=nav&amp;utm_campaign=sd17" title="">SnackDown Qualifier 2017</a></li>
+<li id="menu-5224" class="menu-path-www.codechef.com-LTIME48"><a href="http://www.codechef.com/LTIME48" title="">May Lunchtime 2017</a></li>
+<li id="menu-5679" class="menu-path-www.codechef.com-COOK82"><a href="http://www.codechef.com/COOK82" title="">May Cook-Off 2017</a></li>
+</ul>
+</li>
+<li id="menu-138" class="menuparent menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">DISCUSS</a><ul><li id="menu-139" class="menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">Forums</a></li>
+<li id="menu-140" class="menu-path-blog.codechef.com-"><a href="http://blog.codechef.com/" title="">Blog</a></li>
+<li id="menu-920" class="menu-path-wiki-"><a href="https://www.codechef.com/wiki/" title="">Wiki</a></li>
+<li id="menu-2202" class="menu-path-https--www.facebook.com-CodeChef"><a href="https://www.facebook.com/CodeChef" title="">Facebook</a></li>
+<li id="menu-141" class="menu-path-www.twitter.com-codechef"><a href="http://www.twitter.com/codechef" title="">Twitter</a></li>
+</ul>
+</li>
+<li id="menu-143" class="menuparent menu-path-node-124098"><a href="https://www.codechef.com/community" title="">COMMUNITY</a><ul><li id="menu-5741" class="menu-path-www.codechef.com-school"><a href="http://www.codechef.com/school" title="">CodeChef for Schools</a></li>
+<li id="menu-733" class="menu-path-www.codechef.com-hostyourcontest"><a href="http://www.codechef.com/hostyourcontest" title="Hosting Contest on CodeChef">Host your Contest</a></li>
+<li id="menu-2310" class="menu-path-www.codechef.com-goforgold"><a href="http://www.codechef.com/goforgold" title="">Go for Gold</a></li>
+<li id="menu-3830" class="menu-path-www.codechef.com-campus_chapter-about"><a href="http://www.codechef.com/campus_chapter/about" title="">Campus Chapter</a></li>
+</ul>
+</li>
+<li id="menu-147" class="menuparent menu-path-node-3"><a href="https://www.codechef.com/help" title="">HELP</a><ul><li id="menu-643" class="menu-path-www.codechef.com-wiki-faq"><a href="http://www.codechef.com/wiki/faq" title="">Frequently Asked Questions</a></li>
+<li id="menu-5824" class="menu-path-node-6587475"><a href="https://www.codechef.com/ratings" title="">Rating Mechanism</a></li>
+<li id="menu-5813" class="menu-path-ratings-all"><a href="https://www.codechef.com/ratings/all" title="">CodeChef Rating (All)</a></li>
+<li id="menu-5815" class="menu-path-ratings-all-school"><a href="https://www.codechef.com/ratings/all-school" title="">CodeChef Rating (Junior)</a></li>
+<li id="menu-710" class="menu-path-www.codechef.com-wiki-faq-problem-setters"><a href="http://www.codechef.com/wiki/faq-problem-setters" title="">FAQ for problem setters</a></li>
+<li id="menu-1389" class="menu-path-www.codechef.com-problemsetting"><a href="http://www.codechef.com/problemsetting" title="Codechef Problem Creation">Problem Setting</a></li>
+<li id="menu-850" class="menu-path-www.codechef.com-wiki-tutorials"><a href="http://www.codechef.com/wiki/tutorials" title="">Tutorials</a></li>
+<li id="menu-1820" class="menu-path-node-503865"><a href="https://www.codechef.com/event-calendar" title="Event Calendar">Event Calendar</a></li>
+<li id="menu-2372" class="menu-path-discuss.codechef.com-top-users-"><a href="http://discuss.codechef.com/top/users/" title="">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li id="menu-5681" class="menuparent menu-path-node-6479484"><a href="https://www.codechef.com/aboutus" title="">ABOUT</a><ul><li id="menu-151" class="menu-path-www.codechef.com-aboutus"><a href="http://www.codechef.com/aboutus" title="">About CodeChef</a></li>
+<li id="menu-849" class="menu-path-www.codechef.com-team"><a href="http://www.codechef.com/team" title="Team CodeChef">Team CodeChef</a></li>
+<li id="menu-708" class="menu-path-node-157468"><a href="https://www.codechef.com/press" title="Press Room">Press Room</a></li>
+<li id="menu-709" class="menu-path-node-157470"><a href="https://www.codechef.com/ceoscorner" title="CEO&#39;s Corner">CEO's Corner</a></li>
+<li id="menu-1858" class="menu-path-www.codechef.com-contactus"><a href="http://www.codechef.com/contactus" title="">Contact Us</a></li>
+<li id="menu-152" class="menu-path-www.directi.com-"><a href="http://www.directi.com/" title="">About Directi</a></li>
+</ul>
+</li>
+</ul>
+ 
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--.site header-->
+      
+      <main class="contest-container content">
+        
+        <div>
+          <aside class="breadcrumbs">
+            <a href="https://www.codechef.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.codechef.com/contests/">Compete</a>&nbsp;»&nbsp;SnackDown Online Qualifier 2017
+          </aside>
+        </div>
+        <section class="content-area small-8 columns pl0">
+
+          <div class="banner plr10">
+            <img src="./SnackDown Online Qualifier 2017 _ CodeChef_files/1495279171.png" data-bindattr-522="522">
+          </div>
+
+          
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="time-zone">
+                <span id="timezone_on">The information will be updated in 126 seconds</span>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="plr10">
+            <div class="problem-table" id="problems-list">
+              <div id="ember523" class="ember-view"><div class="" data-bindattr-545="545">  </div><div class="table-component" style="position: relative;">    <div class="topBox">       </div>        <div class="table"><div class="left-nav nav" style="display: none;"><img class="nav-img" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/nav-left.png"></div><div class="right-nav nav" style="display: none;"><img class="nav-img" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/nav-right.png"></div>        <table class="dataTable">            <thead>            <tr>             <th>  <a id="ember550" class="ember-view" href="https://www.codechef.com/SNCKQL17?order=asc&amp;page=1&amp;sortBy=name">                <div class="sortIcon both" data-bindattr-551="551"></div>                <div style="display: inline-block">                Name    </div>    </a>                  </th>                                <th>  <a id="ember553" class="ember-view" href="https://www.codechef.com/SNCKQL17?order=asc&amp;page=1&amp;sortBy=code">                <div class="sortIcon both" data-bindattr-554="554"></div>                <div style="display: inline-block">                Code    </div>    </a>                  </th>                                <th>  <a id="ember556" class="ember-view" href="https://www.codechef.com/SNCKQL17?order=asc&amp;page=1&amp;sortBy=successful_submissions">                <div class="sortIcon active-desc" data-bindattr-557="557"></div>                <div style="display: inline-block">                Successful Submissions    </div>    </a>                  </th>                                <th>  <a id="ember559" class="ember-view" href="https://www.codechef.com/SNCKQL17?order=asc&amp;page=1&amp;sortBy=accuracy">                <div class="sortIcon both" data-bindattr-560="560"></div>                <div style="display: inline-block">                Accuracy    </div>    </a>                  </th>                                 </tr>             </thead><tbody>  <tr id="ember566" class="ember-view">
+      <td class="cc-problem-name">
+        <div><span><a id="ember567" class="ember-view" href="https://www.codechef.com/SNCKQL17/problems/SNAKPROC" title="Snake Procession">Snake Procession</a> </span> <div class="todo-widget" style="visibility: hidden;"><input type="image" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="SNAKPROC" contest="SNCKQL17"><div class="todo-button-message"></div></div></div>
+      </td>
+      <td>
+        
+        <div><a href="https://www.codechef.com/SNCKQL17/submit/SNAKPROC" data-bindattr-571="571">SNAKPROC</a></div>
+        
+      </td>
+      <td class="num">
+        <div><div data-tooltip="">8710</div></div>
+      </td>
+      <td class="num">
+        <div><a href="https://www.codechef.com/SNCKQL17/status/SNAKPROC" data-bindattr-570="570">43.32</a></div>
+      </td>
+    </tr>  <tr id="ember572" class="ember-view">
+      <td class="cc-problem-name">
+        <div><span><a id="ember573" class="ember-view" href="https://www.codechef.com/SNCKQL17/problems/TEMPLELA" title="Temple Land">Temple Land</a> </span> <div class="todo-widget" style="visibility: hidden;"><input type="image" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="TEMPLELA" contest="SNCKQL17"><div class="todo-button-message"></div></div></div>
+      </td>
+      <td>
+        
+        <div><a href="https://www.codechef.com/SNCKQL17/submit/TEMPLELA" data-bindattr-577="577">TEMPLELA</a></div>
+        
+      </td>
+      <td class="num">
+        <div><div data-tooltip="">8102</div></div>
+      </td>
+      <td class="num">
+        <div><a href="https://www.codechef.com/SNCKQL17/status/TEMPLELA" data-bindattr-576="576">57.11</a></div>
+      </td>
+    </tr>  <tr id="ember578" class="ember-view">
+      <td class="cc-problem-name">
+        <div><span><a id="ember579" class="ember-view" href="https://www.codechef.com/SNCKQL17/problems/SAMESNAK" title="Same Snake">Same Snake</a> </span> <div class="todo-widget" style="visibility: hidden;"><input type="image" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="SAMESNAK" contest="SNCKQL17"><div class="todo-button-message"></div></div></div>
+      </td>
+      <td>
+        
+        <div><a href="https://www.codechef.com/SNCKQL17/submit/SAMESNAK" data-bindattr-583="583">SAMESNAK</a></div>
+        
+      </td>
+      <td class="num">
+        <div><div data-tooltip="">1800</div></div>
+      </td>
+      <td class="num">
+        <div><a href="https://www.codechef.com/SNCKQL17/status/SAMESNAK" data-bindattr-582="582">13.58</a></div>
+      </td>
+    </tr>  <tr id="ember584" class="ember-view">
+      <td class="cc-problem-name">
+        <div><span><a id="ember585" class="ember-view" href="https://www.codechef.com/SNCKQL17/problems/SNAKEEAT" title="Snake Eating">Snake Eating</a> </span> <div class="todo-widget" style="visibility: hidden;"><input type="image" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="SNAKEEAT" contest="SNCKQL17"><div class="todo-button-message"></div></div></div>
+      </td>
+      <td>
+        
+        <div><a href="https://www.codechef.com/SNCKQL17/submit/SNAKEEAT" data-bindattr-589="589">SNAKEEAT</a></div>
+        
+      </td>
+      <td class="num">
+        <div><div data-tooltip="">1184</div></div>
+      </td>
+      <td class="num">
+        <div><a href="https://www.codechef.com/SNCKQL17/status/SNAKEEAT" data-bindattr-588="588">6.09</a></div>
+      </td>
+    </tr> </tbody>         </table>     </div>       </div></div>
+            </div><!--.problem-table-->
+          </div>
+
+          <div class="social-share row" data-bindattr-524="524">
+            <div class="large-12 columns">
+              <strong>Liked the Contest? Hit Like Button below</strong>
+              <ul class="inline-list">
+                <li>
+                  <span class="fb-like fb_iframe_widget" data-width="370px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-href="/SNCKQL17" data-bindattr-525="525" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=191217060453&amp;container_width=0&amp;href=https%3A%2F%2Fwww.codechef.com%2FSNCKQL17&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=370px"><span style="vertical-align: bottom; width: 370px; height: 20px;"><iframe name="f3e40de73febd28" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/like.html" style="border: none; visibility: visible; width: 370px; height: 20px;" class=""></iframe></span></span>
+                </li>
+                <li class="right">
+                  <span style="width: 80px; height: 20px;margin-top: -2px;">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="codechef" data-text="CodeChef got a new treat for me in SnackDown Online Qualifier 2017" data-bindattr-526="526">Tweet</a>
+                  </span>
+                </li>
+                <div class="clearfix"></div>
+              </ul>
+            </div>
+          </div><!--.social-share-->
+
+          <div id="announcements" class="cc-text-block static-datatable announcements" data-bindattr-527="527">
+            <h3>Announcements</h3>
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="content"><p><b>19:10 IST: </b>The Mandarin translations have been uploaded.</p>
+<p><b>17:00 IST: </b>The Mandarin translations are not available currently. They will be provided soon.</p></div>
+              </div>
+            </div>
+          </div><!--#announcements-->
+
+          
+
+          <div id="rules" class="cc-text-block static-datatable rules" data-bindattr-529="529">
+            <h3>Contest Details</h3>
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="content"><h4>About CodeChef SnackDown 2017</h4>
+<p class="last">SnackDown 2017 is an annual multi-round global programming tournament conducted by CodeChef. More information about it can be found <a href="https://www.codechef.com/snackdown/2017">here</a>.</p>
+<h4>Registration:</h4>
+<p>This is a team contest, so a separate registration is needed for the team to participate. Go through the following steps to register your team:</p>
+<ul class="last">
+<li>Log in with your normal CodeChef user ID.</li>
+<li>Click on the&nbsp;<a href="https://www.codechef.com/teams/register/SNCKQL17" target="_self"><strong>Team Registration Link</strong></a> and register your team for the contest.</li>
+<li>Click logout in the top right corner and log in using the Team Name and password you registered with.</li>
+<li>You can get more information about team contests&nbsp;<a href="https://www.codechef.com/wiki/team-contests" target="_blank">here</a>.</li>
+<li>If you do not have a CodeChef ID create one&nbsp;<a href="https://www.codechef.com/user/register" target="_blank">here</a>.</li>
+</ul>
+<h4>Contest Details:</h4>
+<ul class="last">
+<li>Duration: 96 hours</li>
+<li>Start time: 20th May 2017, 1700 hrs IST</li>
+<li>End time: 24th May 2017, 1700 hrs IST</li>
+<li>You may check your timezone <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Qualifying+Round&amp;iso=20170520T17&amp;p1=44" target="_blank">here</a>.</li>
+</ul>
+<h4>Eligibility Criteria: Anyone with a knack for Programming :)</h4>
+<p class="last">Our contests are open to all the programmers across the globe. However, all the participants are expected to abide to <a href="http://discuss.codechef.com/questions/18662/does-codechef-have-any-code-of-conduct" target="_blank">CodeChef Code Of Conduct.</a></p>
+<h4>Judging Criteria:</h4>
+<ul class="last">
+<li>All the problems have same points allotted to them.</li>
+<li>Users are ranked according to the most problems solved.</li>
+<li>Teams which solve at least 1 problem will qualify for the Pre-Elimination rounds.</li>
+<li>The decision of the organizers in declaring the results will be final. No queries in this regard will be entertained.</li>
+<li>Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>
+</ul>
+<p><b>Note: You can now "Code, Compile, and Run" your codes on our newly launched <a href="https://www.codechef.com/ide" target="_blank">Online IDE</a>.</b></p>
+<p>However, if you are using any other online development environment, make sure that other contestants don't have access to your code. As a contestant, you are responsible for making sure others don't access the code that you submit. If you use Ideone, make sure to mark your submission "private" (not secret)".</p></div>
+              </div>
+            </div>
+          </div><!--#rules-->
+
+        </section>
+        <!--.content-area-->
+
+        <aside class="sidebar small-4 columns pr0">
+          <div id="timer" class="widget pl0 pr0 seperate cc-visible" data-bindattr-531="531">
+            <h4>Contest Ends In</h4><br><ul class="timer inline-list"><li><span id="clock-day-left">1</span>Days</li> <li><span id="clock-hrs-left">18</span>Hrs</li> <li><span id="clock-min-left">5</span>Min</li> <li><span id="clock-sec-left">14</span>Sec</li></ul>
+            <div id="contest-ended"></div>
+          </div>
+
+          <div id="nid" class="widget seperate cc-hidden" data-bindattr-533="533">
+            <h4>Edit</h4><br>
+            <a class="button fnone blue" href="https://www.codechef.com/node/undefined/edit" data-bindattr-534="534">Edit Contest</a>
+          </div>
+
+          <div id="team-contest" class="widget seperate cc-visible" data-bindattr-535="535">
+            <h4>Registered Teams</h4>
+            <div>
+              <a href="https://www.codechef.com/teams/list/SNCKQL17" data-bindattr-590="590" class="text-22">
+                17828
+              </a>
+              
+            </div>
+          </div>
+
+          <div id="contest-reminder" class="widget seperate cc-hidden" data-bindattr-536="536">
+            <h4>Contest Reminder</h4>
+            <a class="button blue fnone contest-start-notification" data="SNCKQL17" data-bindattr-537="537">Set Reminder for the contest</a>
+          </div>
+
+          <div id="contest-ranks" class="widget seperate cc-visible" data-bindattr-538="538">
+            <h4>Contest Ranks</h4>
+            
+            <p style="font-size: 14px;"> Your Rank: 1
+              <br>
+              Score: 4</p>
+            
+            <a target="_blank" href="https://www.codechef.com/rankings/SNCKQL17" data-bindattr-539="539" class="button blue fnone">Go to Contest Ranks</a>
+          </div>
+
+          <div id="recent-activity" class="box-white seperate widget text-left recent-activity">
+            <h5 data-ember-action="540">Recent Activity
+              <button class="button grey toogle-button fa fa-plus" data-bindattr-541="541"></button>
+            </h5>
+            <div class="content cc-hidden" data-bindattr-542="542">
+              <div id="ember543" class="ember-view"><div class="" data-bindattr-594="594">  </div><div class="table-component" style="position: relative;">    <div class="topBox">       </div>        <div class="table"><div class="left-nav nav" style="display: none;"><img class="nav-img" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/nav-left.png"></div><div class="right-nav nav" style="display: none;"><img class="nav-img" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/nav-right.png"></div>        <table class="dataTable">            <thead>            <tr>              </tr>             </thead><tbody><tr></tr><div style="text-align: center;">Oops! we don't have data.</div></tbody>         </table>     </div>       </div></div>
+            </div>
+          </div>
+        </aside>
+        <!--.sidebar-->
+        
+        <div class="clearfix"></div>
+      </main>
+      <!--.contest-container-->
+    
+    </div></div>
+
+  <footer class="site">
+    <div id="block-block-13" class="block block-block block-header">
+      <div class="content">
+        <script type="text/javascript">
+          String.prototype.capitalize = function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+          };
+
+          disconnectOauth = function(event, account) {
+            if (event != undefined) {
+              event.preventDefault();
+            }
+            var r = confirm("Are you sure you want to disconnect " + account.capitalize() + " account?");
+            if (r == true) {
+              clearUserCache();
+              $.ajax({
+                url: '/OAuth/' + account,
+                type: 'DELETE',
+                success: function() {
+                  window.location.reload();
+                },
+                error: function() {
+                  invokeGenericModal({
+                    message: "Couldn't complete your request. Please try again.",
+                    id: account + '-error-message'
+                  });
+                }
+              });
+            }
+          };
+        </script>
+
+        <script language="javascript" type="text/javascript">
+          function formatTime(ts) {
+            now = new Date(ts);
+
+            localtime = new Date();
+            hour = now.getHours();
+            min = now.getMinutes();
+            sec = now.getSeconds();
+
+            if (min <= 9) {
+              min = "0" + min;
+            }
+            if (sec <= 9) {
+              sec = "0" + sec;
+            }
+            if (hour > 12) {
+              hour = hour - 12;
+              add = " PM";
+            } else {
+              hour = hour;
+              add = " AM";
+            }
+            if (hour == 12) {
+              add = " PM";
+            }
+            if (hour == 00) {
+              hour = "12";
+            }
+
+            $('#server-time').html(((hour <= 9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+
+            nextSec = (now.getTime() + 1000);
+
+            setTimeout("formatTime(" + nextSec + ")", 1000);
+          }
+
+          function getDtTimeZone() {
+            var rightNow = new Date();
+            var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+            var temp = toDay.toGMTString();
+            var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+            var stdTime = (toDay - date2) / (1000 * 60 * 60);
+            return stdTime;
+          }
+        </script>
+
+        <div class="row">
+          <div class="small-12 columns">
+            <p class="text-center"><u>CodeChef is a non-commercial competitive programming community</u></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-8 columns">
+            <ul class="inline-list">
+              <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+              <li><a target="_blank" href="http://www.directi.com/">About Directi</a></li>
+              <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+              <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+              <li><a href="http://www.codechef.com/Programming-Languages">Programming Languages</a></li>
+              <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+            </ul>
+            <p>© 2009 <a href="http://directi.com/" target="_blank">Directi Group</a>. All Rights Reserved. CodeChef uses SPOJ © by <a href="http://www.sphere-research.com/" target="_blank">Sphere Research Labs</a><br>In order to report copyright violations of any kind, send in an email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></p>
+          </div>
+
+          <div class="small-4 columns text-right sponsor">
+            <a href="http://directi.com/" target="_blank">
+              <img style="width:120px" alt="CodeChef a product of Directi" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/directi-logo.png">
+            </a>
+            <div>
+              The time now is: <span id="server-time">10:51:42 PM</span>
+              
+            </div>
+            <div>
+              <span>Your IP: <span id="client-ip">182.68.19.197</span></span>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-53602-42']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        <!-- Google Code for Visitors that do not sign-up Remarketing List -->
+        <script type="text/javascript">
+          /* <![CDATA[ */
+          var google_conversion_id = 960072479;
+          var google_custom_params = window.google_tag_params;
+          var google_remarketing_only = true;
+          /* ]]> */
+        </script>
+        <script type="text/javascript" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/conversion.js">
+        </script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe><iframe name="google_cookie_match_frame" title="Google cookie match frame" width="1" height="1" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/pixel.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="display:none" scrolling="no"></iframe>
+        <noscript>
+          &lt;div style="display:inline;"&gt;
+            &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?guid=ON&amp;amp;script=0"/&gt;
+          &lt;/div&gt;
+        </noscript>
+        <!-- Google Code for .tech domain -->
+
+        <!-- Start Alexa Certify Javascript -->
+
+        <script type="text/javascript">
+          _atrk_opts = {
+            atrk_acct: "q16Cj1a8gN00iz",
+            domain: "codechef.com",
+            dynamic: true
+          };
+          (function() {
+            var as = document.createElement('script');
+            as.type = 'text/javascript';
+            as.async = true;
+            as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+          })();
+        </script>
+
+        <noscript>&lt;img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz" style="display:none" height="1" width="1" alt="" /&gt;</noscript>
+        <!-- End Alexa Certify Javascript -->
+
+        <div class="row">
+          <div class="small-12 columns">
+            <article>
+              <h6><a href="http://www.codechef.com/">CodeChef</a> - A Platform for Aspiring Programmers</h6>
+              <p>CodeChef was created as a platform to help programmers make it big in the world of algorithms, <strong>computer programming</strong> and <strong>programming contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a <strong>programming contest</strong> at the start of the month and another smaller programming challenge in the middle of the month. We also aim to have training sessions and discussions related to <strong>algorithms</strong>, <strong>binary search</strong>, technicalities like <strong>array size</strong> and the likes. Apart from providing a platform for <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials and forum discussions to help those who are new to the world of <strong>computer programming</strong>.</p>
+            </article>
+
+            <article>
+              <h6><a href="https://www.codechef.com/problems/easy">Practice Section</a> - A Place to hone your 'Computer Programming Skills'</h6>
+              <p>Try your hand at one of our many practice problems and submit your solution in a language of your choice. Our <strong>programming contest</strong> judge accepts solutions in over 35+ programming languages. Preparing for coding contests were never this much fun! Receive points, and move up through the CodeChef ranks. Use our practice section to better prepare yourself for the multiple <strong>programming challenges</strong> that take place through-out the month on CodeChef.</p>
+            </article>
+
+            <article>
+              <h6><a href="https://www.codechef.com/problems/easy">Compete</a> - Monthly Programming Contests and Cook-offs</h6>
+              <p>Here is where you can show off your <strong>computer programming skills</strong>. Take part in our 10 day long monthly coding contest and the shorter format Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great prizes. Our <strong>programming contests</strong> have prizes worth up to INR 20,000 (for Indian Community), $700 (for Global Community) and lots more CodeChef goodies up for grabs.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="link-group left">
+              <h6>Programming Tools</h6>
+              <ul class="side-nav">
+                <li><a href="https://www.codechef.com/ide">Online IDE</a></li>
+                <li><a href="http://www.codechef.com/contests#FurtureContests">Upcoming Coding Contests</a></li>
+                <li><a href="http://www.codechef.com/hostyourcontest">Contest Hosting</a></li>
+                <li><a href="http://www.codechef.com/problemsetting">Problem Setting</a></li>
+                <li><a href="http://www.codechef.com/wiki/tutorials">CodeChef Tutorials</a></li>
+                <li><a href="https://www.codechef.com/wiki">CodeChef Wiki</a></li>
+              </ul>
+            </div>
+
+            <div class="link-group left">
+              <h6>Practice Problems</h6>
+              <ul class="side-nav">
+                <li><a href="https://www.codechef.com/problems/easy">Easy</a></li>
+                <li><a href="https://www.codechef.com/problems/medium">Medium</a></li>
+                <li><a href="https://www.codechef.com/problems/Hard">Hard</a></li>
+                <li><a href="https://www.codechef.com/problems/challenge">Challenge</a></li>
+                <li><a href="https://www.codechef.com/problems/extcontest">Peer</a></li>
+                <li><a href="https://www.codechef.com/problems/school">School</a></li>
+                <li><a href="https://www.codechef.com/wiki/faq">FAQ's</a></li>
+              </ul>
+            </div>
+
+            <div class="link-group left">
+              <h6>Initiatives</h6>
+              <ul class="side-nav">
+                <li><a href="http://www.codechef.com/goforgold">Go for Gold</a></li>
+                <li><a href="http://www.codechef.com/school">CodeChef for Schools</a></li>
+                <li><a href="http://www.codechef.com/campus_chapter/about">Campus Chapters</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>        </div>
+      </div>
+      <div id="block-block-51" class="block block-block block-header">
+        <div class="content">
+          <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>  </div>
+        </div>
+        <div class="row powered-by">
+          <div class="small-12 columns">
+            <p><a href="http://www.bigrock.in/">Domain Registration in India</a> and <a href="http://www.bigrock.com/web-hosting/">Web Hosting</a> powered by BigRock</p>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        var sscache = {};
+
+        function getPage(url, data, page) {
+          var cacheId = url + JSON.stringify(data);
+          var cache = sscache;
+          var success = function(data) {
+            cache[cacheId] = data;
+            $('#rankContentDiv').html(data['content']);
+            var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+            var pageinfo = "<div align='center' class='pageinfo'> - </div>";
+            if (data['max_page'] > 0) {
+              pageinfo = "<div align='center' class='pageinfo'>" + newpage + " of " + data['max_page'] + "</div>";
+            }
+            $("#loader").html(pageinfo);
+
+          };
+
+          var error = function(request, errorType) {
+            try {
+              if (page === undefined) {
+                retryButton = '<input id="retryButton" type="button" value="Retry"/>';
+                $('#rankContentDiv').html(retryButton);
+                $('#retryButton').click(function() {
+                  $('#rankContentDiv').html('<p align="center"><img src="/sites/all/themes/abessive/images/ajax-loader.gif" /> Fetching content</p>');
+                  getPage(url, data, page);
+                });
+              } else {
+                $("#loader").html("Oops! It couldn't load. Try again.");
+              }
+            } catch (e) {}
+          };
+
+          if (cache.hasOwnProperty(cacheId)) {
+            success(cache[cacheId]);
+            return;
+          }
+
+          cAjax({
+            url: url,
+            type: "GET",
+            data: data,
+            cache: false,
+            timeout: 10000,
+            dataType: "json",
+            success: success,
+            error: error
+          });
+
+        }
+
+
+        function set_page(element) {
+          var page;
+
+          if (element == "prev")
+            page = $("#prev_p").val();
+          else if (element == "next")
+            page = $("#next_p").val();
+
+          return page;
+        }
+
+        function onload_getpage_ssubmissions(element) {
+          $('#loader').html('<p><img src="/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/></p>');
+          var contest = "";
+          if ($("#ccode").length != 0) {
+            contest = '&ccode=' + $("#ccode").val();
+          }
+
+          var page = set_page(element);
+          var data = "page=" + page + "&pcode=" + $("#pcode").val() + contest;
+          var url = "/ssubmission/prob";
+          getPage(url, data, page);
+        }
+      </script>
+
+      <script>
+        (function(h, o, t, j, a, r) {
+          h.hj = h.hj || function() {
+            (h.hj.q = h.hj.q || []).push(arguments)
+          };
+          h._hjSettings = {
+            hjid: 167687,
+            hjsv: 5
+          };
+          a = o.getElementsByTagName('head')[0];
+          r = o.createElement('script');
+          r.async = 1;
+          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+      </script>
+
+    
+    
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/0F7S7QWJ0Ac.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="ads"></div><style>
+    .snackdown-bar{
+    background: #bf4a58;
+    width: 970px;
+    margin: 0 auto 7px;
+    height: 40px;
+    position: relative;
+    top: 126px;
+    margin-top: 12px;
+  }
+  .snackdown-bar *{
+    box-sizing: border-box;
+  }
+  .snackdown-bar .text-medium{
+    font-size: 14px;
+  }
+  .snackdown-bar .text-big{
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+  }
+  .snackdown-bar .text-large{
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    margin: 0 4px;
+  }
+  .snackdown-bar .x-small{
+    font-size: 8px;
+  }
+  .snackdown-bar .text-light{
+    color: #dedede;
+  }
+  .snackdown-bar .logo{
+    float: left;
+    background: #dd4759;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+  }
+  .snackdown-bar .logo img{
+    width: 65px;
+    margin-top: 6px;
+  }
+  .snackdown-bar .refer{
+    float: right;
+    background: #dd4759;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    padding-top: 7px;
+  }
+  .snackdown-bar .refer a{
+    width: 126px;
+    height: 26px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    border: solid 1px #ffffff;
+    font-family: HelveticaNeue-Bold, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #4a4a4a;
+    display: inline-block;
+    line-height: 22px;
+    text-decoration: none;
+  }
+  .snackdown-bar .refer a:hover{
+    text-decoration: none;
+    box-shadow: none;
+  }
+  .snackdown-bar > ul{
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  .snackdown-bar > ul > li{
+    list-style-type: none;
+    display: inline;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 100;
+    line-height: 0.9;
+    position: relative;
+    padding-left: 28px;
+  }
+  .snackdown-bar > ul > li:nth-child(2){
+    margin-right: -46px;
+  }
+  .snackdown-bar > ul > li:nth-child(2)::after{
+    right: 34px;
+  }
+  .snackdown-bar > ul > li::after{
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: -2px;
+    height: 15px;
+    width: 1px;
+    background: #fff;
+  }
+  .snackdown-bar > ul > li em{
+    font-size: 14px;
+    color: #fff;
+  }
+  .snackdown-bar > ul > li span.date{
+    position: relative;
+    top: -8px;
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+    font-size: 11px;
+  }
+  .snackdown-bar > ul > li span.time{
+    position: relative;
+    top: 6px;
+    left: -48px;
+    font-size: 10px;
+  }
+  .snackdown-bar .timer{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    top: 9px;
+    left: 28px;
+  }
+  .snackdown-bar .timer li{
+    margin-left: 3px;
+    color: #dedede;
+    font-size: 7px;
+    text-transform: capitalize;
+    text-align: center;
+    float: left;
+    display: block;
+    padding-left: 1px;
+    padding-bottom: 0;
+  }
+  .snackdown-bar .timer li span{
+    padding: 4px 0;
+    width: 18px;
+    color: #4a4a4a;
+    font-size: 11px;
+    background: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1;
+    border-radius: 1px;
+    margin-bottom: 2px;
+    margin-top: -3px;
+  }
+</style><div class="snackdown-bar" style="display: none;">
+    <a href="https://www.codechef.com/snackdown/2017?utm_source=homebar&amp;utm_medium=banner&amp;utm_campaign=sd17" class="logo"><img src="./SnackDown Online Qualifier 2017 _ CodeChef_files/SnackDown17-header-bar.png" alt="CodeChef SnackDown 2017"></a>
+
+    <ul>
+        <li>Compete &amp; win <span class="text-medium">$20.5K</span></li>
+        <li>
+            <em>Qualifier</em> ends on
+            <span class="text-large">24</span>
+            <span class="date">May, WED</span>
+            <span class="time">5:00 <span class="x-small">PM IST</span></span>
+        </li>
+        <li><span class="text-light">Duration:</span> <span class="text-big">96 hrs</span></li>
+        <ul class="timer">
+            <li><span id="s-clock-day-left"></span>Days</li>
+            <li><span id="s-clock-hrs-left"></span>Hrs</li>
+            <li><span id="s-clock-min-left"></span>Min</li>
+            <li><span id="s-clock-sec-left"></span>Sec</li>
+        </ul>
+    </ul>
+
+  <span class="refer">
+    <a href="https://www.codechef.com/SNCKQL17?utm_source=homebar&amp;utm_medium=banner&amp;utm_campaign=sd17">Join Now</a>
+  </span>
+</div><script type="text/javascript">
+var contests = ['SNCKQL17','SNCKPA17','SNCKPB17','SNCKEL17','SNCKFL17'];
+var url_parts = window.location.pathname.split('/');
+var hostname = window.location.hostname;
+var is_valid_page =!((url_parts.length >=3 && url_parts[1] == 'rankings' && ($.inArray(url_parts[2],contests) > -1)) || (url_parts.length >=2 && $.inArray(url_parts[1],contests) > -1) || (url_parts.length >=4 && url_parts[1] == 'teams' && url_parts[2] == 'register' && ($.inArray(url_parts[3],contests) > -1)) || (url_parts.length >=3 && url_parts[1] == 'snackdown' && url_parts[2] == '2017') || (url_parts.length >=2 && url_parts[1] == 'signup') || (url_parts.length >=5 && url_parts[1] == 'teams' && url_parts[3] == 'register' && ($.inArray(url_parts[4],contests) > -1)) || url_parts[1] == 'admin' || hostname.indexOf('developers') == 0);
+
+if(is_valid_page)
+{
+if ($('.header-container').length) {
+    $($('.snackdown-bar')).insertAfter($('.header-container'));
+} else if ($('header.site').length) {
+    $($('.snackdown-bar')).insertAfter($('header.site'));
+    $('.snackdown-bar').css('top', 0);
+    $('.snackdown-bar').css('width', '964px');
+    $('.snackdown-bar > ul > li').css('top', '-3px');
+}
+
+
+var start_date = [2017, 05, 24, 17, 00, 00]
+var contest_text = 'Online Qualifier';
+var start_date_obj = new Date(start_date[0], (start_date[1] - 1), start_date[2], start_date[3], start_date[4], start_date[5]);
+$(document).ready(function () {
+    $('#clock-text').html(contest_text);
+    GetCount('May 22, 2017 22:42:02');
+    function GetCount(ts) {
+        var time_left = '';
+        var current_date_obj = new Date(ts);
+        var diff_in_time1 = start_date_obj.getTime() - current_date_obj.getTime();
+        var time_left_for_start = [diff_in_time1];
+        var days = 0, hours = 0, mins = 0, secs = 0, out = '';
+        time_left_for_start[0] = Math.floor(time_left_for_start[0] / 1000);
+        days = Math.floor(time_left_for_start[0] / 86400);
+        time_left_for_start[0] = time_left_for_start[0] % 86400;
+        hours = Math.floor(time_left_for_start[0] / 3600);
+        time_left_for_start[0] = time_left_for_start[0] % 3600;
+        mins = Math.floor(time_left_for_start[0] / 60);
+        time_left_for_start[0] = time_left_for_start[0] % 60;
+        secs = Math.floor(time_left_for_start[0]);
+        $('#s-clock-day-left').html(String(days));
+        $('#s-clock-hrs-left').html(String(hours));
+        $('#s-clock-min-left').html(String(mins));
+        $('#s-clock-sec-left').html(String(secs));        
+        setTimeout(function () {
+             GetCount((new Date()).getTime() + (((new Date()).getTimezoneOffset()) * 60 * 1000) + 19800000);
+        }, 1000);
+    }
+});
+}else{
+  $('.snackdown-bar').hide();
+}</script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./SnackDown Online Qualifier 2017 _ CodeChef_files/saved_resource(1).html"></iframe></body></html>

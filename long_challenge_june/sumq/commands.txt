@@ -1,0 +1,8 @@
+g++ -std=c++11 sumq.cpp -o sumq_optimized.out;
+g++ -std=c++11 sumq_brute.cpp -o sumq_brute.out;
+g++ -std=c++11 generator.cpp -o generator.out;
+
+./generator.out > input_gen.txt;
+./sumq_brute.out < input_gen.txt > output_brute.txt;
+./sumq_optimized.out < input_gen.txt > output_optimized.txt;
+diff output_brute.txt output_optimized.txt;

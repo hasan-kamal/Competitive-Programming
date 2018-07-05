@@ -1,0 +1,5 @@
+g++ -std=c++11 k_query.cpp -o k_query.out;
+g++ -std=c++11 generator.cpp -o generator.out;
+
+./generator.out > inp_gen.txt;
+./k_query.out < inp_gen.txt > out_gen.txt;

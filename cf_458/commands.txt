@@ -1,0 +1,5 @@
+g++ c_brute.cpp -o c_brute.out;
+g++ c.cpp -o c.out;
+./c.out < input.txt > output.txt;
+./c_brute.out < input.txt > output_brute.txt;
+diff output.txt output_brute.txt;
