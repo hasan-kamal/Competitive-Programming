@@ -1,0 +1,4 @@
+g++ generator.cpp -o generator.out;
+./generator.out > ip.txt;
+g++ test.cpp;
+./a.out < ip.txt;
