@@ -63,7 +63,7 @@ int main(){
 		cout<<m.x<<" ";
 	cout<<endl;
 
-	vector<int> vektor = {1, 2, 3};
+	vector<int> vektor = {1, 2, 3}; // need to compile with -std=c++11 for this to work
 	vi new_vector(vektor); //initialize a vector using existing vector
 	vi new_vector2 = vektor; //initialize a vector using existing vector
 
