@@ -1,0 +1,7 @@
+g++ generator.cpp -o generator.out;
+g++ main.cpp -o a.out;
+g++ main_brute.cpp -o brute.out;
+./generator.out > input_gen.txt;
+./a.out < input_gen.txt > my_output.txt;
+./brute.out < input_gen.txt > brute_output.txt;
+diff my_output.txt brute_output.txt;
