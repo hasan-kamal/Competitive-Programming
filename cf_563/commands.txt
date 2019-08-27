@@ -1,0 +1,4 @@
+g++ generator.cpp -o generator.out;
+./generator.out > inp.txt;
+g++ a_someone.cpp -o a_someone.out;
+./a_someone.out < inp.txt;
