@@ -40,6 +40,13 @@ void djikstra(vvii &adj_list, int source, int n){
 		ii mn = *q.begin();
 		q.erase(mn); //extract_min removes the element also
 
+		// to avoid integer overflow below (since we're using INT_MAX),
+		// can add if(mn.first == INT_MAX) break;
+		// because if we get a node that is not reachable,
+		// then all further ones would definitely not be reachable
+		// important, otherwise program will crash if
+		// every node is not reachable from s!
+
 		for(ii &nbour : adj_list[mn.second]){
 			if(dist[nbour.first]>dist[mn.second]+nbour.second){
 				//decrease_key operation
