@@ -1,8 +1,0 @@
-g++ horrible.cpp -std=c++11 -o horrible.out;
-g++ generator.cpp -std=c++11 -o generator.out;
-g++ brute.cpp -std=c++11 -o brute.out;
-
-./horrible.out < input_gen.txt > output_gen.txt;
-./brute.out < input_gen.txt > output_gen_brute.txt;
-
-diff output_gen.txt output_gen_brute.txt;
