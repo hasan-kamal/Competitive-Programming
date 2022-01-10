@@ -4,13 +4,13 @@ This repo contains my solutions to algorithmic programming problems from differe
 
 # What's in here
 
-| Subdirectory | Platform link | # problems solved |
+| Subdirectory | Platform link | User profile | # problems solved |
 | ------------ | ------------- | ----------------- |
-| `atcoder`    | [atcoder.jp](https://atcoder.jp/) | 23 |
-| `codechef`   | [codechef.com](https://www.codechef.com/) | 36 |
-| `codeforces` | [codeforces.com](https://codeforces.com/) | 158 |
-| `codejam`    | [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam) | 7 |
-| `cp3_book`    | [Online Judge (formerly UVa)](https://onlinejudge.org/), [CP3 Book](https://cpbook.net/details?cp=3) | 46 |
-| `iiitd`      | foobar@iiit-delhi | 42 |
-| `misc`       | none | none |
-||| Total = 312 |
+| `atcoder`    | [atcoder.jp](https://atcoder.jp/) | [hasankamal](https://atcoder.jp/users/hasankamal) | 23 |
+| `codechef`   | [codechef.com](https://www.codechef.com/) | [hasankamal](https://www.codechef.com/users/hasankamal) | 36 |
+| `codeforces` | [codeforces.com](https://codeforces.com/) | [hasankamal](https://codeforces.com/profile/hasankamal) |158 |
+| `codejam`    | [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam) | - | 7 |
+| `cp3_book`    | [Online Judge](https://onlinejudge.org/) | - | 46 |
+| `iiitd`      | foobar@iiit-delhi | - | 42 |
+| `misc`       | none | - | none |
+|||| Total = 312 |
