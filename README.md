@@ -1,6 +1,6 @@
 # About
 
-This repo contains my solutions to algorithmic programming problems from different online platforms / books. This is a an ongoing work in-progress!
+This repo contains my solutions to algorithmic programming problems from different online platforms / books. This is an ongoing work in-progress!
 
 # What's in here
 
