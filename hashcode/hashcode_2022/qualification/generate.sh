@@ -1,0 +1,13 @@
+g++ -std=c++11 solution.cpp;
+./a.out < input_data/a_an_example.in.txt > output_data/a.out;
+echo "a done";
+./a.out < input_data/b_better_start_small.in.txt > output_data/b.out;
+echo "b done";
+./a.out < input_data/c_collaboration.in.txt > output_data/c.out;
+echo "c done";
+./a.out < input_data/d_dense_schedule.in.txt > output_data/d.out;
+echo "d done";
+./a.out < input_data/e_exceptional_skills.in.txt > output_data/e.out;
+echo "e done";
+./a.out < input_data/f_find_great_mentors.in.txt > output_data/f.out;
+echo "f done";
