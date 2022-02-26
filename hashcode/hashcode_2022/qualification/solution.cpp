@@ -71,7 +71,8 @@ Schedule Solve(const std::vector<Project>& projects, const std::vector<Contribut
 	// Create sorted order of projects based on some metric.
 	std::vector<std::pair<float, int>> order;  // pair of metric, project_id.
 	for (const Project& p : projects) {
-		order.push_back({p.best_before, p.id});
+		// order.push_back({p.best_before, p.id});
+		order.push_back({-p.score, p.id});
 	}
 	std::sort(order.begin(), order.end());
 
